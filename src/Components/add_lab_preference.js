@@ -3,7 +3,93 @@ import React, { useState } from "react";
 import {Container, Row, Col, Card, Form, Button } from "react-bootstrap";
 
 function AddLab() {
+  function handleClick(e) {
+    e.preventDefault();
+    console.log('The link was clicked.');
+  }
   const [selectedFile, setSelectedFile] = useState(null);
+  function addComponent() {
+    // step 1 create your element
+    var element = document.createElement("h2");
+    // step 2 create your text
+    var text = document.createTextNode("Boo!");
+    // step 3 add (or append) your text to your element. Now your element had that new (or appended) value.
+    element.appendChild(text);
+    // step 4 add (or append) your newly created element with text to the tag with this id
+    document.getElementById("test").appendChild(element);
+  }
+
+  const [ form, setForm ] = useState([])
+
+  const [ add_append, setAddAppend ] = useState([{
+
+  }])
+
+const Element =() => <div className="add_append">
+<Row>
+<Col lg={4} sm={6} xs={12}>
+<Form.Select aria-label="Default select example" className="form-control mb-3">
+<option>Restoration</option>
+<option value="1">Crown & Bridge</option>
+<option value="2">Crown & Bridge</option>
+<option value="3">Crown & Bridge</option>
+</Form.Select>
+</Col>
+<Col lg={4} sm={6} xs={12}>
+<Form.Select aria-label="Default select example" className="form-control mb-3">
+<option>Product</option>
+<option value="1">Other</option>
+</Form.Select>
+</Col>
+<Col lg={4} sm={6} xs={12}>
+<Form.Select aria-label="Default select example" className="form-control mb-3">
+<option>Preferred Lab </option>
+<option value="1">One</option>
+<option value="2">Two</option>
+<option value="3">Three</option>
+</Form.Select>
+</Col>
+</Row>
+<Row>
+<Col lg={4} sm={6} xs={12}>
+<Form.Select aria-label="Default select example" className="form-control mb-3">
+<option>Budget </option>
+<option value="1">Standard</option>
+<option value="2">Standard</option>
+<option value="3">Standard</option>
+</Form.Select>
+</Col>
+<Col lg={4} sm={6} xs={12}>
+<Form.Select aria-label="Default select example" className="form-control mb-3">
+<option>Lab Location </option>
+<option value="1">Domestic</option>
+<option value="2">International </option>
+</Form.Select>
+</Col>
+<Col lg={4} sm={6} xs={12}>
+<Form.Select aria-label="Default select example" className="form-control mb-3">
+<option>Design</option>
+<option value="1">In-office Design</option>
+<option value="2">In-office Design</option>
+</Form.Select>
+</Col>
+<Col lg={4} sm={6} xs={12}>
+<Form.Select aria-label="Default select example" className="form-control mb-3">
+<option>Design Approval</option>
+<option value="Yes">Yes</option>
+<option value="No">No</option>
+</Form.Select>
+</Col>
+<Col lg={4} sm={6} xs={12}>
+<Form.Select aria-label="Default select example" className="form-control mb-3">
+<option>ETA of case (days)</option>
+<option value="">1-10 days</option>
+<option value="">10-15 days</option>
+</Form.Select>
+</Col>
+</Row>
+</div>;
+
   return (
     <div className="addlabpreference">
       <Row>
@@ -32,6 +118,9 @@ function AddLab() {
         </div>
         </div>
 </Col>
+{/* <a href="#" onClick={handleClick}>
+      Click me
+    </a> */}
       <Col lg={12} sm={12} xs={12}>
         <div className="card mb-lg-4 mb-sm-4 mb-3">
         <div className="card-body border-bottom-dotted">
@@ -137,9 +226,10 @@ function AddLab() {
             </Col>
             <Col lg={12} sm={12} xs={12}>
             <div className="text-left mb-3">
-            <button className="btn btn-primary btn_white"><i class="fa fa-plus" aria-hidden="true"></i>
-            Add Preference </button>
+            <button className="btn btn-primary btn_white" ><i class="fa fa-plus" aria-hidden="true"></i>
+            Add Preference com</button>
             </div>
+            <p id="test"></p> 
             </Col>
             </Row>
             <Row>
@@ -298,76 +388,21 @@ function AddLab() {
               </div>
         </div>
         <div className="card mb-lg-4 mb-sm-4 mb-3">
+        
         <div className="card mb-lg-4 mb-sm-4 mb-3">
               <div className="card-body border-bottom-dotted">
               <h3>Product details  <i class="fa fa-question-circle" aria-hidden="true"></i></h3>
               <div className="form">
-              <Form>
-              <Row>
-              <Col lg={4} sm={6} xs={12}>
-              <Form.Select aria-label="Default select example" className="form-control mb-3">
-              <option>Restoration</option>
-              <option value="1">Crown & Bridge</option>
-              <option value="2">Crown & Bridge</option>
-              <option value="3">Crown & Bridge</option>
-              </Form.Select>
-              </Col>
-              <Col lg={4} sm={6} xs={12}>
-              <Form.Select aria-label="Default select example" className="form-control mb-3">
-              <option>Product</option>
-              <option value="1">Other</option>
-              </Form.Select>
-              </Col>
-              <Col lg={4} sm={6} xs={12}>
-              <Form.Select aria-label="Default select example" className="form-control mb-3">
-              <option>Preferred Lab </option>
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
-              </Form.Select>
-              </Col>
-              </Row>
-              <Row>
-              <Col lg={4} sm={6} xs={12}>
-              <Form.Select aria-label="Default select example" className="form-control mb-3">
-              <option>Budget </option>
-              <option value="1">Standard</option>
-              <option value="2">Standard</option>
-              <option value="3">Standard</option>
-              </Form.Select>
-              </Col>
-              <Col lg={4} sm={6} xs={12}>
-              <Form.Select aria-label="Default select example" className="form-control mb-3">
-              <option>Lab Location </option>
-              <option value="1">Domestic</option>
-              <option value="2">International </option>
-              </Form.Select>
-              </Col>
-              <Col lg={4} sm={6} xs={12}>
-              <Form.Select aria-label="Default select example" className="form-control mb-3">
-              <option>Design</option>
-              <option value="1">In-office Design</option>
-              <option value="2">In-office Design</option>
-              </Form.Select>
-              </Col>
-              <Col lg={4} sm={6} xs={12}>
-              <Form.Select aria-label="Default select example" className="form-control mb-3">
-              <option>Design Approval</option>
-              <option value="Yes">Yes</option>
-              <option value="No">No</option>
-              </Form.Select>
-              </Col>
-              <Col lg={4} sm={6} xs={12}>
-              <Form.Select aria-label="Default select example" className="form-control mb-3">
-              <option>ETA of case (days)</option>
-              <option value="">1-10 days</option>
-              <option value="">10-15 days</option>
-              </Form.Select>
-              </Col>
-              </Row>
-              </Form>
+              <Form >
+                { add_append.map((element)=>
+
+            <Element />
+                )}
+                </Form>
               <div className="text-left mb-3">
-              <button className="btn btn-primary btn_white"><i class="fa fa-plus" aria-hidden="true"></i>
+              <button className="btn btn-primary btn_white" onClick={()=>{
+                setAddAppend([...add_append, {}])
+              }}><i class="fa fa-plus" aria-hidden="true"></i>
               Add Preference </button>
               </div>
               </div>

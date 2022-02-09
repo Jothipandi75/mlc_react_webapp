@@ -9,6 +9,7 @@ import Sidebar from '../src/Components/sidebar';
 import AddLab  from "./Components/add_lab_preference";
 import DoctorPrefernce from "./Components/doctor_preference";
 import LabProfile from "./Components/lab_profile";
+import AboutLabProfile from "./Components/about_lab_profile";
 
 function App() {
   const [selectedFile, setSelectedFile] = useState(null);
@@ -53,6 +54,7 @@ function App() {
           <Route path="/add_lab_preference" element={<AddLab />}/>
           <Route path="/doctor_preference" element={<DoctorPrefernce />}/>
           <Route path="/lab_profile" element={<LabProfile/>} />
+          <Route path="/about_lab_profile" element={<AboutLabProfile/> }/>
           <Route component={NoMatch} />
           </Routes>
         </Col> 
