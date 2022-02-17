@@ -28,7 +28,7 @@ function AboutLabProfile() {
         <li><a href=""><i class="fa fa-bell-o" aria-hidden="true"></i><i class="fa fa-circle" aria-hidden="true"></i>
         </a></li>
         <li>
-        <img alt="" className="user_img" src="assets/user_icon.webp" />
+        <img alt="" className="user_img" src="https://fatneedle.com/mlc_marketplace/assets/user_icon.webp" />
         </li>
         </ul>
         </div>
@@ -42,7 +42,7 @@ function AboutLabProfile() {
         <Row>
         <Col lg={3} sm={3} xs={12}>
         <div className="card_bx">
-        <img alt="img" src="assets/user_icon.webp" />
+        <img alt="img" src="https://fatneedle.com/mlc_marketplace/assets/user_icon.webp" />
         </div>
         </Col>
         <Col lg={9} sm={9} xs={12}>
@@ -56,7 +56,7 @@ function AboutLabProfile() {
             <span className="star"><i class="fa fa-star" aria-hidden="true"></i></span>
             <span className="star"><i class="fa fa-star-o" aria-hidden="true"></i></span>
             </div>
-            <Link to="/add_lab_preference"> <button className="btn btn-primary light_blue mr-lg-3 mr-sm-3 mr-0">Add Lab</button> </Link> 
+            <Link to="/mlc_marketplace/add_lab_preference"> <button className="btn btn-primary light_blue mr-lg-3 mr-sm-3 mr-0">Add Lab</button> </Link> 
             <Link to="/">  <button className="btn btn-default light_white">Download Brochure</button></Link>
         </div>
         </Col>

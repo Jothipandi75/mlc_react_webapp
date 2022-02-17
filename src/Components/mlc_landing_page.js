@@ -16,12 +16,12 @@ function MlcLandingPage() {
                 <Col lg={12} sm={12} xs={12} className="pt-lg-3 pt-sm-3 pt-2 pb-lg-3 pb-sm-3 pb-2">
                     <Row>
                         <Col lg={6} sm={6} xs={6}>
-                            <img alt="MLC" className="logo_mlc" src="assets/logo-login.png" />
+                            <img alt="MLC" className="logo_mlc" src="https://fatneedle.com/mlc_marketplace/assets/logo-login.png" />
                         </Col>
                         <Col lg={6} sm={6} xs={6}>
                             <ul className="login_signup">
                                 <li className="signup" onClick={handleShow}><a href="#">Sign up</a></li>
-                                <li className="login"><a href="#">Login in</a></li>
+                                <li className="login"><a href="#">Log in</a></li>
                             </ul>
                         </Col>
                     </Row>
@@ -31,7 +31,7 @@ function MlcLandingPage() {
                         <Carousel.Item>
                             <img
                                 className="d-block w-100"
-                                src="assets/banner/1.png"
+                                src="https://fatneedle.com/mlc_marketplace/assets/banner/1.png"
                                 alt="First slide"
                             />
                             {/* <Carousel.Caption>
@@ -42,7 +42,7 @@ function MlcLandingPage() {
                         <Carousel.Item>
                             <img
                                 className="d-block w-100"
-                                src="assets/banner/2.png"
+                                src="https://fatneedle.com/mlc_marketplace/assets/banner/2.png"
                                 alt="Second slide"
                             />
                             {/* <Carousel.Caption>
@@ -53,7 +53,7 @@ function MlcLandingPage() {
                         <Carousel.Item>
                             <img
                                 className="d-block w-100"
-                                src="assets/banner/3.png"
+                                src="https://fatneedle.com/mlc_marketplace/assets/banner/3.png"
                                 alt="Third slide"
                             />
                             {/* <Carousel.Caption>
@@ -62,15 +62,13 @@ function MlcLandingPage() {
         </Carousel.Caption> */}
                         </Carousel.Item>
                     </Carousel>
-                    <Navbar bg="primary" variant="dark" className="new_btm_navbar">
-                        <Container>
-                    <Nav className="me-auto">
-                        <Nav.Link href="./about_lab_profile"><img alt="" src="assets/Asset_22.png" /> <span>Profile</span></Nav.Link>
-                        <Nav.Link href="#"><img alt="" src="assets/Asset_23.png" /> <span>Add New Cases</span></Nav.Link>
-                        <Nav.Link href="#"><img alt="" src="assets/Asset_24.png" /> <span>My Cases</span></Nav.Link>
-                    </Nav>
-                        </Container>
-                    </Navbar>
+                    <ul role="nav" className='new_btm_navbar navbar navbar-expand navbar-dark bg-primary'>
+                        <div className="me-auto navbar-nav">
+                        <li className="nav-link"><Link to="/mlc_marketplace/about_lab_profile"><img alt="" src="assets/Asset_22.png" /> Profile</Link></li>
+                        <li className="nav-link"><Link to="/mlc_marketplace/doctor_preference"> <img alt="" src="assets/Asset_23.png"/> Add New Cases</Link></li>
+                        <li className="nav-link"> <Link to="/mlc_marketplace/about_lab_profile"><img alt="" src="assets/Asset_24.png"/> My Cases</Link></li>
+                        </div>
+                    </ul>
                 </Col>
                 <Col lg={12} sm={12} xs={12} className="">
                     <Row>
@@ -79,28 +77,28 @@ function MlcLandingPage() {
                                 <Col lg={6} sm={6} xs={12}>
                                     <div className="grid_card">
                                         <span className="top_corner"></span>
-                                        <img alt="icon" src="assets/Asset_icon_1.svg" />
+                                        <img alt="icon" src="https://fatneedle.com/mlc_marketplace/assets/Asset_icon_1.svg" />
                                         <h5>Search Doctor</h5>
                                     </div>
                                 </Col>
                                 <Col lg={6} sm={6} xs={12}>
                                     <div className="grid_card">
                                         <span className="top_corner"></span>
-                                        <img alt="icon" src="assets/Asset_icon_2.svg" />
+                                        <img alt="icon" src="https://fatneedle.com/mlc_marketplace/assets/Asset_icon_2.svg" />
                                         <h5>Lab Search</h5>
                                     </div>
                                 </Col>
                                 <Col lg={6} sm={6} xs={12}>
                                     <div className="grid_card">
                                         <span className="top_corner"></span>
-                                        <img alt="icon" src="assets/Asset_icon_3.svg" />
+                                        <img alt="icon" src="https://fatneedle.com/mlc_marketplace/assets/Asset_icon_3.svg" />
                                         <h5>Events</h5>
                                     </div>
                                 </Col>
                                 <Col lg={6} sm={6} xs={12}>
                                     <div className="grid_card">
                                         <span className="top_corner"></span>
-                                        <img alt="icon" src="assets/Asset_icon_4.svg" />
+                                        <img alt="icon" src="https://fatneedle.com/mlc_marketplace/assets/Asset_icon_4.svg" />
                                         <h5>News</h5>
                                     </div>
                                 </Col>
@@ -108,14 +106,14 @@ function MlcLandingPage() {
                         </Col>
                         <Col lg={5} sm={5} xs={12} className="mb-3">
                             <div className="grid_card marquees">
-                                <img alt="" className="top_border" src="assets/top_border.png" />
+                                <img alt="" className="top_border" src="https://fatneedle.com/mlc_marketplace/assets/top_border.png" />
                                 <div className="grid_bx_parent">
                                     <h4>News / Events</h4>
                                     <div className="bg_grey">
                                         <div className="row">
                                             <div className="col-lg-4 col-sm-4 col-4">
                                                 <div className="grid_bx1">
-                                                    <img alt="" src="assets/Asset_event_2.png" className="img-fluid" />
+                                                    <img alt="" src="https://fatneedle.com/mlc_marketplace/assets/Asset_event_2.png" className="img-fluid" />
                                                 </div>
                                             </div>
                                             <div className="col-lg-8 col-sm-8 col-8">
@@ -129,7 +127,7 @@ function MlcLandingPage() {
                                         <div className="row">
                                             <div className="col-lg-4 col-sm-4 col-4">
                                                 <div className="grid_bx1">
-                                                    <img alt="" src="assets/Asset_event_4.png" className="img-fluid" />
+                                                    <img alt="" src="https://fatneedle.com/mlc_marketplace/assets/Asset_event_4.png" className="img-fluid" />
                                                 </div>
                                             </div>
                                             <div className="col-lg-8 col-sm-8 col-8">
@@ -143,7 +141,7 @@ function MlcLandingPage() {
                                         <div className="row">
                                             <div className="col-lg-4 col-sm-4 col-4">
                                                 <div className="grid_bx1">
-                                                    <img alt="" src="assets/Asset_event_5.png" className="img-fluid" />
+                                                    <img alt="" src="https://fatneedle.com/mlc_marketplace/assets/Asset_event_5.png" className="img-fluid" />
                                                 </div>
                                             </div>
                                             <div className="col-lg-8 col-sm-8 col-8">
@@ -164,7 +162,19 @@ function MlcLandingPage() {
           <Modal.Title>Signup</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-        <Link to="/doctor_onboarding_profile">
+        <ul className="signup_link">
+        <li><Link to="/mlc_marketplace/doctor_onboarding_profile">Doctor
+        <br/>
+         <img alt="Doctor" src="assets/doctor_signup.png" />
+         </Link>
+        </li>
+        <li><Link to="/mlc_marketplace/lab_onboarding_profile">Lab
+        <br/>
+         <img alt="Doctor" src="assets/lab_signup.png" />
+         </Link>
+        </li>
+        </ul>
+        {/* <Link to="/doctor_onboarding_profile">
         <Button variant="outline-primary" size="lg">
         Doctor
         </Button>
@@ -173,7 +183,7 @@ function MlcLandingPage() {
         <Button variant="outline-primary" size="lg">
         Lab
         </Button>
-        </Link>
+        </Link> */}
         </Modal.Body>
         {/* <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>

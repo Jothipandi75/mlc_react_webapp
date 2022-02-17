@@ -101,7 +101,7 @@ const Element =() => <div className="add_append">
         <li><a href=""><i class="fa fa-bell-o" aria-hidden="true"></i><i class="fa fa-circle" aria-hidden="true"></i>
         </a></li>
         <li>
-            <img alt="" className="user_img" src="assets/user_icon.webp" />
+            <img alt="" className="user_img" src="https://fatneedle.com/mlc_marketplace/user_icon.webp" />
         </li>
         </ul>
         </div>
@@ -139,7 +139,7 @@ const Element =() => <div className="add_append">
           />
           <span>
           {/* <i class="fa fa-file-image-o" aria-hidden="true"></i>  */}
-          <img alt="file upload" className="grid_upload_img" src="assets/pdfdoc_upload.png" />
+          <img alt="file upload" className="grid_upload_img" src="https://fatneedle.com/mlc_marketplace/assets/pdfdoc_upload.png" />
           Attach File <br/>
           <small>.png,.jpg,jpeg</small>
           </span>
@@ -155,7 +155,7 @@ const Element =() => <div className="add_append">
           onChange={(e) => setSelectedFile(e.target.files[0])}
           />
           <span>
-            <img alt="file upload" className="grid_upload_img" src="assets/file_upload.png" />
+            <img alt="file upload" className="grid_upload_img" src="https://fatneedle.com/mlc_marketplace/assets/file_upload.png" />
           {/* <i class="fa fa-file-image-o" aria-hidden="true"></i> <br/> */}
           Attach File <br/>
           <small>.pdf,.doc,docx</small>

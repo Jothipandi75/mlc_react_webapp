@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Container, Row, Col, Card, Form, Button } from "react-bootstrap";
 
+
 import './App.css';
 import Sidebar from '../src/Components/sidebar';
 import AddLab from "./Components/add_lab_preference";
@@ -17,15 +18,16 @@ import LabSearch from "./Components/lab_search";
 
 function App() {
   return (
+    
     <Router>
       <div className="App">
         <Container fluid className="p-0 marketplace_web">
           <Row>
-           <Col lg={12} sm={12} xs={12} id="sidebar-wrapper" className="pl-0">
+           {/* <Col lg={12} sm={12} xs={12} id="sidebar-wrapper" className="pl-0">
               <Sidebar />
-            </Col> 
+            </Col>  */}
             <Col lg={12} sm={12} xs={12} id="page-content-wrapper">
-              <div className="row top_header_bx d-none">
+              {/* <div className="row top_header_bx d-none">
                 <div className="col-lg-4 col-sm-4 col-12">
                   <h1><i className="fa fa-angle-left" aria-hidden="true"></i> Doctor Preference</h1>
                 </div>
@@ -47,24 +49,25 @@ function App() {
                     </li>
                   </ul>
                 </div>
-              </div>
+              </div> */}
               <Routes>
-                <Route path="/" exact element={<MlcLandingPage />} />
-                <Route path="/add_lab_preference" element={<AddLab />} />
-                <Route path="/doctor_preference" element={<DoctorPrefernce />} />
-                <Route path="/lab_profile" element={<LabProfile />} />
-                <Route path="/about_lab_profile" element={<AboutLabProfile />} />
-                <Route path="/mlc_landing_page" element={<MlcLandingPage />} />
-                <Route path="/doctor_onboarding_profile" element={<DoctorOnboardingProfile />} />
-                <Route path="/lab_onboarding_profile" element={<LabOnboardingProfile />} />
-                <Route path="/login" element={<Login />} />
-                <Route path="/lab_search" element={<LabSearch />} />
+                <Route path="/mlc_marketplace" exact element={<MlcLandingPage />} />
+                <Route path="/mlc_marketplace/add_lab_preference" element={<AddLab />} />
+                <Route path="/mlc_marketplace/doctor_preference" element={<DoctorPrefernce />} />
+                <Route path="/mlc_marketplace/lab_profile" element={<LabProfile />} />
+                <Route path="/mlc_marketplace/about_lab_profile" element={<AboutLabProfile />} />
+                <Route path="/mlc_marketplace/mlc_landing_page" element={<MlcLandingPage />} />
+                <Route path="/mlc_marketplace/doctor_onboarding_profile" element={<DoctorOnboardingProfile />} />
+                <Route path="/mlc_marketplace/lab_onboarding_profile" element={<LabOnboardingProfile />} />
+                <Route path="/mlc_marketplace/login" element={<Login />} />
+                <Route path="/mlc_marketplace/lab_search" element={<LabSearch />} />
               </Routes>
             </Col>
           </Row>
         </Container>
       </div>
     </Router>
+   
   );
 }
 

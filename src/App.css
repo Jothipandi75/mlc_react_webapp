@@ -31,6 +31,18 @@ font-weight: 500;
 font-style: normal;
 }
 
+@font-face {
+  font-family: 'Circular Std';
+  src: url('https://fatneedle.com/mlc_marketplace/fonts/circular/CircularStd-Medium.eot');
+  src: local('https://fatneedle.com/mlc_marketplace/fonts/circular/Circular Std Medium'), local('CircularStd-Medium'),
+      url('https://fatneedle.com/mlc_marketplace/fonts/circular/CircularStd-Medium.eot?#iefix') format('embedded-opentype'),
+      url('https://fatneedle.com/mlc_marketplace/fonts/circular/CircularStd-Medium.woff2') format('woff2'),
+      url('https://fatneedle.com/mlc_marketplace/fonts/circular/CircularStd-Medium.woff') format('woff'),
+      url('https://fatneedle.com/mlc_marketplace/fonts/circular/CircularStd-Medium.ttf') format('truetype');
+font-weight: 500;
+font-style: normal;
+}
+
 /* @font-face {
   font-family: 'Circular Std';
   src: url('./fonts/circular/CircularStd-Medium.eot');
@@ -664,6 +676,11 @@ padding: 0px !important;
   line-height: normal;
 }
 
+.App .new_btm_navbar.navbar-dark.navbar.navbar-expand .navbar-nav .nav-link a:hover{
+  text-decoration: none;
+  list-style: none;
+}
+
 .App .new_btm_navbar.navbar-dark.navbar.navbar-expand .navbar-nav .nav-link:nth-child(2) {
   border-left: 1px solid #2e2e30;
   border-right: 1px solid #2e2e30;
@@ -731,7 +748,7 @@ border-radius: 5px;
 }
 
 .App{
-  background: url(../assets/background.png) no-repeat center center; 
+  background: url(https://fatneedle.com/mlc_marketplace/assets/background.png) no-repeat center center; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -878,20 +895,60 @@ border-radius: 5px;
   box-sizing: content-box;
   width: 1em;
   height: 1em;
-  padding: 0.25em;
   color: #000;
   border: 0;
-  border-radius: 0.25rem;
-  opacity: .5;
-  background: transparent url('../assets/close_icon.svg') 50%/1em auto no-repeat;
+  border-radius: 100%;
+  background: transparent url('https://fatneedle.com/mlc_marketplace/assets/close_icon.svg') 50%/1em auto no-repeat;
+  background-color: #fff;
+  opacity: 1;
+  padding: 8px;
 }
 
 .modal .modal-content .modal-body {
   text-align: center;
 }
 
+.modal .modal-content .modal-body ul.signup_link{
+  padding-left: 0px;
+  margin-bottom: 0px;
+  list-style: none;
+}
+
+.modal .modal-content .modal-body ul.signup_link li {
+  display: inline-block;
+  margin: 5px 15px;
+  background-color: #32bbff;
+  border-radius: 10px;
+  color: #fff;
+  padding: 15px;
+}
+
+.modal .modal-content .modal-body ul.signup_link li a {
+  color: #fff;
+  font-size: 20px;
+}
+
+.modal .modal-content .modal-body ul.signup_link li a:hover {
+  text-decoration: none;
+  list-style: none;
+}
+
+.modal .modal-content .modal-body ul.signup_link li a img {
+  width: 100px;
+  margin: 0 auto;
+  display: block;
+  border-radius: 10px;
+}
+
 .modal .modal-dialog .modal-content .modal-header {
   padding: 0.5rem 0.5rem;
+  background-color: #32bbff;
+  color: #fff;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
+.modal .modal-dialog .modal-content {
+  border-radius: 30px;
 }
 
 .modal .modal-dialog .modal-content .modal-header .modal-title{
@@ -899,6 +956,7 @@ border-radius: 5px;
   width: 100%;
   text-transform: uppercase;
   font-size: 1.3rem;
+  padding: 15px;
 }
 
 .modal .modal-content .modal-body .btn.btn-outline-primary.btn-lg {
