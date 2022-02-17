@@ -51,16 +51,16 @@ function App() {
                 </div>
               </div> */}
               <Routes>
-                <Route path="/mlc_marketplace" exact element={<MlcLandingPage />} />
-                <Route path="/mlc_marketplace/add_lab_preference" element={<AddLab />} />
-                <Route path="/mlc_marketplace/doctor_preference" element={<DoctorPrefernce />} />
-                <Route path="/mlc_marketplace/lab_profile" element={<LabProfile />} />
-                <Route path="/mlc_marketplace/about_lab_profile" element={<AboutLabProfile />} />
-                <Route path="/mlc_marketplace/mlc_landing_page" element={<MlcLandingPage />} />
-                <Route path="/mlc_marketplace/doctor_onboarding_profile" element={<DoctorOnboardingProfile />} />
-                <Route path="/mlc_marketplace/lab_onboarding_profile" element={<LabOnboardingProfile />} />
-                <Route path="/mlc_marketplace/login" element={<Login />} />
-                <Route path="/mlc_marketplace/lab_search" element={<LabSearch />} />
+                <Route path="/" exact element={<MlcLandingPage />} />
+                <Route path="/add_lab_preference" element={<AddLab />} />
+                <Route path="/doctor_preference" element={<DoctorPrefernce />} />
+                <Route path="/lab_profile" element={<LabProfile />} />
+                <Route path="/about_lab_profile" element={<AboutLabProfile />} />
+                <Route path="/mlc_landing_page" element={<MlcLandingPage />} />
+                <Route path="/doctor_onboarding_profile" element={<DoctorOnboardingProfile />} />
+                <Route path="/lab_onboarding_profile" element={<LabOnboardingProfile />} />
+                <Route path="/login" element={<Login />} />
+                <Route path="/lab_search" element={<LabSearch />} />
               </Routes>
             </Col>
           </Row>

@@ -107,7 +107,7 @@ function LabOnboardingProfile() {
           />
           <span>
           {/* <i class="fa fa-file-image-o" aria-hidden="true"></i>  */}
-          <img alt="file upload" className="grid_upload_img" src="https://fatneedle.com/mlc_marketplace/assets/pdfdoc_upload.png" />
+          <img alt="file upload" className="grid_upload_img" src="assets/pdfdoc_upload.png" />
           Attach File <br/>
           <small>.png,.jpg,jpeg</small>
           </span>
@@ -123,7 +123,7 @@ function LabOnboardingProfile() {
           onChange={(e) => setSelectedFile(e.target.files[0])}
           />
           <span>
-            <img alt="file upload" className="grid_upload_img" src="https://fatneedle.com/mlc_marketplace/assets/file_upload.png" />
+            <img alt="file upload" className="grid_upload_img" src="assets/file_upload.png" />
           {/* <i class="fa fa-file-image-o" aria-hidden="true"></i> <br/> */}
           Attach File <br/>
           <small>.pdf,.doc,docx</small>
