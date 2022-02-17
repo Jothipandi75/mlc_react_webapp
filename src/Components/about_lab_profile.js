@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import {Container, Row, Col, Card, Form, Button } from "react-bootstrap";
 import {Tabs, Tab} from 'react-bootstrap-tabs';
+import { Link } from "react-router-dom";
 import '../App.css';
 
 function AboutLabProfile() {
@@ -16,7 +17,7 @@ function AboutLabProfile() {
         <ul className="menu_list_top">
         <li>
         <div class="input-group">
-        <input type="text" class="form-control" placeholder="Search this blog"/>
+        <input type="text" class="form-control" placeholder="Search"/>
         <div class="input-group-append">
         <button class="btn btn-secondary" type="button">
         <i class="fa fa-search"></i>
@@ -24,7 +25,8 @@ function AboutLabProfile() {
         </div>
         </div>
         </li>
-        <li><a href=""><i class="fa fa-bell-o" aria-hidden="true"></i></a></li>
+        <li><a href=""><i class="fa fa-bell-o" aria-hidden="true"></i><i class="fa fa-circle" aria-hidden="true"></i>
+        </a></li>
         <li>
         <img alt="" className="user_img" src="assets/user_icon.webp" />
         </li>
@@ -54,8 +56,8 @@ function AboutLabProfile() {
             <span className="star"><i class="fa fa-star" aria-hidden="true"></i></span>
             <span className="star"><i class="fa fa-star-o" aria-hidden="true"></i></span>
             </div>
-            <button className="btn btn-primary light_blue mr-lg-3 mr-sm-3 mr-0">Add Lab</button>
-            <button className="btn btn-default light_white">Download Brochure</button>
+            <Link to="/add_lab_preference"> <button className="btn btn-primary light_blue mr-lg-3 mr-sm-3 mr-0">Add Lab</button> </Link> 
+            <Link to="/">  <button className="btn btn-default light_white">Download Brochure</button></Link>
         </div>
         </Col>
         </Row>

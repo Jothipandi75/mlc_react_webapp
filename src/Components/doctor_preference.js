@@ -16,7 +16,7 @@ function DoctorPrefernce() {
         <ul className="menu_list_top">
         <li>
         <div class="input-group">
-        <input type="text" class="form-control" placeholder="Search this blog"/>
+        <input type="text" class="form-control" placeholder="Search"/>
         <div class="input-group-append">
         <button class="btn btn-secondary" type="button">
         <i class="fa fa-search"></i>
@@ -24,7 +24,8 @@ function DoctorPrefernce() {
         </div>
         </div>
         </li>
-        <li><a href=""><i class="fa fa-bell-o" aria-hidden="true"></i></a></li>
+        <li><a href=""><i class="fa fa-bell-o" aria-hidden="true"></i><i class="fa fa-circle" aria-hidden="true"></i>
+        </a></li>
         <li>
             <img alt="" className="user_img" src="assets/user_icon.webp" />
         </li>

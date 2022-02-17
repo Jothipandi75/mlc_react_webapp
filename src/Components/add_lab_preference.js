@@ -3,24 +3,12 @@ import React, { useState } from "react";
 import {Container, Row, Col, Card, Form, Button } from "react-bootstrap";
 
 function AddLab() {
-  function handleClick(e) {
-    e.preventDefault();
-    console.log('The link was clicked.');
-  }
+  // function handleClick(e) {
+  //   e.preventDefault();
+  //   console.log('The link was clicked.');
+  // }
   const [selectedFile, setSelectedFile] = useState(null);
-  function addComponent() {
-    // step 1 create your element
-    var element = document.createElement("h2");
-    // step 2 create your text
-    var text = document.createTextNode("Boo!");
-    // step 3 add (or append) your text to your element. Now your element had that new (or appended) value.
-    element.appendChild(text);
-    // step 4 add (or append) your newly created element with text to the tag with this id
-    document.getElementById("test").appendChild(element);
-  }
-
   const [ form, setForm ] = useState([])
-
   const [ add_append, setAddAppend ] = useState([{
 
   }])
@@ -102,7 +90,7 @@ const Element =() => <div className="add_append">
         <ul className="menu_list_top">
         <li>
         <div class="input-group">
-        <input type="text" class="form-control" placeholder="Search this blog"/>
+        <input type="text" class="form-control" placeholder="Search"/>
         <div class="input-group-append">
         <button class="btn btn-secondary" type="button">
         <i class="fa fa-search"></i>
@@ -110,7 +98,8 @@ const Element =() => <div className="add_append">
         </div>
         </div>
         </li>
-        <li><a href=""><i class="fa fa-bell-o" aria-hidden="true"></i></a></li>
+        <li><a href=""><i class="fa fa-bell-o" aria-hidden="true"></i><i class="fa fa-circle" aria-hidden="true"></i>
+        </a></li>
         <li>
             <img alt="" className="user_img" src="assets/user_icon.webp" />
         </li>
@@ -149,7 +138,8 @@ const Element =() => <div className="add_append">
           onChange={(e) => setSelectedFile(e.target.files[0])}
           />
           <span>
-          <i class="fa fa-file-image-o" aria-hidden="true"></i> <br/>
+          {/* <i class="fa fa-file-image-o" aria-hidden="true"></i>  */}
+          <img alt="file upload" className="grid_upload_img" src="assets/pdfdoc_upload.png" />
           Attach File <br/>
           <small>.png,.jpg,jpeg</small>
           </span>
@@ -165,7 +155,8 @@ const Element =() => <div className="add_append">
           onChange={(e) => setSelectedFile(e.target.files[0])}
           />
           <span>
-          <i class="fa fa-file-image-o" aria-hidden="true"></i> <br/>
+            <img alt="file upload" className="grid_upload_img" src="assets/file_upload.png" />
+          {/* <i class="fa fa-file-image-o" aria-hidden="true"></i> <br/> */}
           Attach File <br/>
           <small>.pdf,.doc,docx</small>
           </span>
@@ -388,8 +379,6 @@ const Element =() => <div className="add_append">
               </div>
         </div>
         <div className="card mb-lg-4 mb-sm-4 mb-3">
-        
-        <div className="card mb-lg-4 mb-sm-4 mb-3">
               <div className="card-body border-bottom-dotted">
               <h3>Product details  <i class="fa fa-question-circle" aria-hidden="true"></i></h3>
               <div className="form">
@@ -408,7 +397,6 @@ const Element =() => <div className="add_append">
               </div>
               </div>
               </div>
-        </div>
         </Col>
         </Row>
     </div>
