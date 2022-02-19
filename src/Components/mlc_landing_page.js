@@ -1,15 +1,36 @@
 import React, { useState } from "react";
 import Carousel from 'react-bootstrap/Carousel';
-import { Container, Row, Col, Navbar, Nav, Modal, Button } from "react-bootstrap";
+import { Container, Row, Col, Navbar, Nav, Modal, Button, Form } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 function MlcLandingPage() {
+
+    const [show, setShow] = useState(false);
+    const [show_login, setShow_login] = useState(false);
+    const [show_login_doctor, setShow_login_doctor] = useState(false);
+    const [show_login_lab, setShow_login_lab] = useState(false);
   
-  const [show, setShow] = useState(false);
-
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
-
+    const handleClose = () => setShow(false);
+    const handleClose_login = () => setShow_login(false);
+    const handleClose_login_doctor = () => {
+        setShow_login_doctor(false);
+      //   setShow_login(false);
+    }
+    const handleClose_login_lab = () => {
+        setShow_login_lab(false);
+      //   setShow_login(false);
+    }
+    const handleShow = () => setShow(true);
+    const handleShow_login = () => setShow_login(true);
+    const handleShow_doctor = () =>{
+         setShow_login_doctor(true);
+         setShow_login(false);
+    }
+    const handleShow_lab = () =>{
+      setShow_login_lab(true);
+      setShow_login(false);
+  
+    } 
     return (
         <div className="mlc_landing_page">
             <Row>
@@ -21,7 +42,7 @@ function MlcLandingPage() {
                         <Col lg={6} sm={6} xs={6}>
                             <ul className="login_signup">
                                 <li className="signup" onClick={handleShow}><a href="#">Sign up</a></li>
-                                <li className="login"><a href="#">Log in</a></li>
+                                <li className="login" onClick={handleShow_login}><a href="#">Login</a></li>
                             </ul>
                         </Col>
                     </Row>
@@ -64,9 +85,9 @@ function MlcLandingPage() {
                     </Carousel>
                     <ul role="nav" className='new_btm_navbar navbar navbar-expand navbar-dark bg-primary'>
                         <div className="me-auto navbar-nav">
-                        <li className="nav-link"><Link to="/about_lab_profile"><img alt="" src="assets/Asset_22.png" /> Profile</Link></li>
-                        <li className="nav-link"><Link to="/doctor_preference"> <img alt="" src="assets/Asset_23.png"/> Add New Cases</Link></li>
-                        <li className="nav-link"> <Link to="/about_lab_profile"><img alt="" src="assets/Asset_24.png"/> My Cases</Link></li>
+                            <li className="nav-link"><Link to="/about_lab_profile"><img alt="" src="assets/Asset_22.png" /> Profile</Link></li>
+                            <li className="nav-link"><Link to="/"> <img alt="" src="assets/Asset_23.png" /> Add New Cases</Link></li>
+                            <li className="nav-link"> <Link to="/"><img alt="" src="assets/Asset_24.png" /> My Cases</Link></li>
                         </div>
                     </ul>
                 </Col>
@@ -84,8 +105,10 @@ function MlcLandingPage() {
                                 <Col lg={6} sm={6} xs={12}>
                                     <div className="grid_card">
                                         <span className="top_corner"></span>
-                                        <img alt="icon" src="assets/Asset_icon_2.svg" />
-                                        <h5>Lab Search</h5>
+                                        <Link to="/lab_search">
+                                            <img alt="icon" src="assets/Asset_icon_2.svg" />
+                                            <h5>Lab Search</h5>
+                                        </Link>
                                     </div>
                                 </Col>
                                 <Col lg={6} sm={6} xs={12}>
@@ -157,24 +180,24 @@ function MlcLandingPage() {
                     </Row>
                 </Col>
             </Row>
-        <Modal show={show} onHide={handleClose}>
-        <Modal.Header closeButton>
-          <Modal.Title>Signup</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-        <ul className="signup_link">
-        <li><Link to="/doctor_onboarding_profile">Doctor
-        <br/>
-         <img alt="Doctor" src="assets/doctor_signup.png" />
-         </Link>
-        </li>
-        <li><Link to="/lab_onboarding_profile">Lab
-        <br/>
-         <img alt="Doctor" src="assets/lab_signup.png" />
-         </Link>
-        </li>
-        </ul>
-        {/* <Link to="/doctor_onboarding_profile">
+            <Modal show={show} onHide={handleClose}>
+                <Modal.Header closeButton>
+                    <Modal.Title>Signup</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                    <ul className="signup_link">
+                        <li><Link to="/doctor_onboarding_profile">Doctor
+                            <br />
+                            <img alt="Doctor" src="assets/doctor_signup.png" />
+                        </Link>
+                        </li>
+                        <li><Link to="/lab_onboarding_profile">Lab
+                            <br />
+                            <img alt="Doctor" src="assets/lab_signup.png" />
+                        </Link>
+                        </li>
+                    </ul>
+                    {/* <Link to="/doctor_onboarding_profile">
         <Button variant="outline-primary" size="lg">
         Doctor
         </Button>
@@ -184,8 +207,8 @@ function MlcLandingPage() {
         Lab
         </Button>
         </Link> */}
-        </Modal.Body>
-        {/* <Modal.Footer>
+                </Modal.Body>
+                {/* <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
             Close
           </Button>
@@ -193,7 +216,129 @@ function MlcLandingPage() {
             Save Changes
           </Button>
         </Modal.Footer> */}
-      </Modal>
+            </Modal>
+            <Modal show={show_login} onHide={handleClose_login}>
+                <Modal.Header closeButton>
+                    <Modal.Title>Login</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                    <ul className="signup_link">
+                        <li><Link to="#" onClick={handleShow_doctor}>Doctor
+                            <br />
+                            <img alt="Doctor" src="assets/doctor_signup.png" />
+                        </Link>
+                        </li>
+                        <li><Link to="#" onClick={handleShow_lab}>Lab
+                            <br />
+                            <img alt="Doctor" src="assets/lab_signup.png" />
+                        </Link>
+                        </li>
+                    </ul>
+                </Modal.Body>
+            </Modal>
+            <Modal show={show_login_doctor} onHide={handleClose_login_doctor} className='doc_login'>
+                <Modal.Header closeButton>
+                    <Modal.Title className="login_title">Login</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                    <Form>
+                        <div className="doctor_onboarding_profile">
+                            <Row>
+                                <Col lg={6} sm={6} xs={12} >
+                                    <div className="pt-lg-4 pb-sm-4 pt-sm-4 pt-3 pb-sm-4 pb-3">
+                                        <img alt="Doctor" class="img_circle" src="assets/dental-popup.png" />
+                                    </div>
+                                </Col>
+                                <Col lg={6} sm={6} xs={12} >
+                                    <Form.Group className="mb-3 login_doc_align" controlId="formBasicEmail">
+                                        <h4 className="login_title">Doctor</h4>
+                                        {/* <Form.Label>Email address</Form.Label> */}
+                                        <Form.Control type="email" placeholder="Username" />
+                                    </Form.Group>
+                                    <Form.Group className="mb-3" controlId="formBasicPassword">
+                                        <Form.Control type="password" placeholder="Password" />
+                                    </Form.Group>
+                                    <div className="row">
+                                        <Row>
+                                            <Form.Group className="mb-3 remember_doc" controlId="formBasicCheckbox">
+                                                <Form.Check type="checkbox" label="Remember me" />
+                                            </Form.Group>
+                                            <Form.Group className="mb-3 forgot_doc" controlId="formBasicCheckbox">
+                                                <p><Link to="/#">Forgot password</Link></p>
+                                            </Form.Group>
+                                        </Row>
+                                    </div>
+                                    <Button type="submit" className="doc_login_btn">
+                                        Login
+                                    </Button>
+                                </Col>
+                            </Row>
+                        </div>
+                    </Form>
+
+                </Modal.Body>
+            </Modal>
+            <Modal show={show_login_lab} onHide={handleClose}>
+                <Modal.Header closeButton>
+                    <Modal.Title>Login</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                    <ul className="signup_link">
+                        <li><Link to="/doctor_onboarding_profile">Doctor
+                            <br />
+                            <img alt="Doctor" src="assets/doctor_signup.png" />
+                        </Link>
+                        </li>
+                        <li><Link to="/lab_onboarding_profile">Lab
+                            <br />
+                            <img alt="Doctor" src="assets/lab_signup.png" />
+                        </Link>
+                        </li>
+                    </ul>
+                </Modal.Body>
+            </Modal>
+            <Modal show={show_login_lab} onHide={handleClose_login_lab} className='doc_login'>
+                <Modal.Header closeButton>
+                    <Modal.Title>Login</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                    <Form>
+                        <div className="doctor_onboarding_profile">
+                            <Row>
+                                <Col lg={6} sm={6} xs={12} >
+                                    <div className="pt-lg-4 pb-sm-4 pt-sm-4 pt-3 pb-sm-4 pb-3">
+                                        <img alt="Doctor" class="img_circle" src="assets/dental-popup.png" />
+                                    </div>
+                                </Col>
+                                <Col lg={6} sm={6} xs={12} >
+                                    <Form.Group className="mb-3 login_doc_align" controlId="formBasicEmail">
+                                        <h4 className="login_title">Lab</h4>
+                                        {/* <Form.Label>Email address</Form.Label> */}
+                                        <Form.Control type="email" placeholder="Username" />
+                                    </Form.Group>
+                                    <Form.Group className="mb-3" controlId="formBasicPassword">
+                                        <Form.Control type="password" placeholder="Password" />
+                                    </Form.Group>
+                                    <div className="row">
+                                        <Row>
+                                            <Form.Group className="mb-3 remember_doc" controlId="formBasicCheckbox">
+                                                <Form.Check type="checkbox" label="Remember me" />
+                                            </Form.Group>
+                                            <Form.Group className="mb-3 forgot_doc" controlId="formBasicCheckbox">
+                                                <p><Link to="/#">Forgot password</Link></p>
+                                            </Form.Group>
+                                        </Row>
+                                    </div>
+                                    <Button variant="primary" type="submit" className="doc_login_btn">
+                                        Login
+                                    </Button>
+                                </Col>
+                            </Row>
+                        </div>
+                    </Form>
+
+                </Modal.Body>
+            </Modal>
         </div>
     )
 }

@@ -1,17 +1,23 @@
 import React, { useState } from "react";
-import {Container, Row, Col, Card, Form, Button } from "react-bootstrap";
-
+import {Container, Row, Col, Card, Form, Button, Modal } from "react-bootstrap";
+import { Link } from "react-router-dom";
 function LabOnboardingProfile() {
 
-  const [type, setType]= useState('');
+/* modal popup */
 
-  const [visible, SetVisible] = useState(false);
+const [show, setShow] = useState(false);
+const handleClose  = () => setShow(false);
+const lab_send_request = () => setShow(true);
 
-    const [selectedFile, setSelectedFile] = useState(null);
-    const [ form, setForm ] = useState([])
-    const [ add_append, setAddAppend ] = useState([{
-  
-    }])
+/* modal popup */
+
+const [type, setType]= useState('');
+const [visible, SetVisible] = useState(false);
+const [selectedFile, setSelectedFile] = useState(null);
+const [ form, setForm ] = useState([])
+const [ add_append, setAddAppend ] = useState([{
+
+}])
   
   const Element =() => <div className="add_append">
   <Row>
@@ -483,12 +489,34 @@ function LabOnboardingProfile() {
         </div>
      </Col>
       <Col lg={12} sm={12} xs={12} className="text-center mb-lg-4 mb-sm-4 mb-3">
-      <Button variant="primary" type="submit">
-      Send Requset
+      <Button variant="primary" type="submit" onClick={lab_send_request}>
+      Send Request
       </Button>
       </Col>
     </Row>
+    <Modal show={show} onHide={handleClose} className="onboarding_modal">
+        {/* <Modal.Header closeButton>
+          <Modal.Title>Modal heading</Modal.Title>
+        </Modal.Header> */}
+        <Modal.Body>
+          <div className="img_success">
+            <img alt="success" src="assets/login_success.png" className="success_img"/>
+            <h2>Thank you for registering </h2>
+            <small>We will contact you soon</small>
+            <Link to="/mlc_marketplace"><button className="btn btn-primary">Back to home</button></Link>
+          </div>
+        </Modal.Body>
+        {/* <Modal.Footer>
+          <Button variant="secondary" onClick={handleClose}>
+            Close
+          </Button>
+          <Button variant="primary" onClick={handleClose}>
+            Save Changes
+          </Button>
+        </Modal.Footer> */}
+      </Modal>
     </div>
+    
   )
 }
 export default LabOnboardingProfile

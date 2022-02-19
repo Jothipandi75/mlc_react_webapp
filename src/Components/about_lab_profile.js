@@ -11,7 +11,7 @@ function AboutLabProfile() {
         <Col lg={12} sm={12} xs={12}>
         <div className="row top_header_bx pt-3">
         <div className="col-lg-4 col-sm-4 col-12 text-left">
-        <h1><i class="fa fa-angle-left" aria-hidden="true"></i> Lab Profile</h1>
+        <h1><Link to=""><i class="fa fa-angle-left" aria-hidden="true"></i></Link> Lab Profile</h1>
         </div>
         <div className="col-lg-8 col-sm-8 col-12 text-right">
         <ul className="menu_list_top">
@@ -47,7 +47,7 @@ function AboutLabProfile() {
         </Col>
         <Col lg={9} sm={9} xs={12}>
         <div className="right_content">
-            <h3>American Dental Clinic</h3>
+            <h3>American Dental Lab</h3>
             <div className="grid_star">
             <span className="font_20px">4.0</span>
             <span className="star"><i class="fa fa-star" aria-hidden="true"></i></span>
@@ -56,7 +56,7 @@ function AboutLabProfile() {
             <span className="star"><i class="fa fa-star" aria-hidden="true"></i></span>
             <span className="star"><i class="fa fa-star-o" aria-hidden="true"></i></span>
             </div>
-            <Link to="/mlc_marketplace/add_lab_preference"> <button className="btn btn-primary light_blue mr-lg-3 mr-sm-3 mr-0">Add Lab</button> </Link> 
+            <Link to="/add_lab_preference"> <button className="btn btn-primary light_blue mr-lg-3 mr-sm-3 mr-0">Add Lab</button> </Link> 
             <Link to="/">  <button className="btn btn-default light_white">Download Brochure</button></Link>
         </div>
         </Col>
