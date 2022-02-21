@@ -15,6 +15,7 @@ import LabOnboardingProfile from "./Components/lab_onboarding_profile";
 import MlcLandingPage from "./Components/mlc_landing_page";
 import Login from "./Components/login";
 import LabSearch from "./Components/lab_search";
+import AddNewCase from "./Components/add_new_case";
 
 function App() {
   return (
@@ -61,6 +62,7 @@ function App() {
                 <Route path="/lab_onboarding_profile" element={<LabOnboardingProfile />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/lab_search" element={<LabSearch />} />
+                <Route path="/add_new_case" element={< AddNewCase />} />
               </Routes>
             </Col>
           </Row>

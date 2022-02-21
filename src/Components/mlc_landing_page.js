@@ -86,7 +86,7 @@ function MlcLandingPage() {
                     <ul role="nav" className='new_btm_navbar navbar navbar-expand navbar-dark bg-primary'>
                         <div className="me-auto navbar-nav">
                             <li className="nav-link"><Link to="/about_lab_profile"><img alt="" src="assets/Asset_22.png" /> Profile</Link></li>
-                            <li className="nav-link"><Link to="/"> <img alt="" src="assets/Asset_23.png" /> Add New Cases</Link></li>
+                            <li className="nav-link"><Link to="/add_new_case"> <img alt="" src="assets/Asset_23.png" /> Add New Cases</Link></li>
                             <li className="nav-link"> <Link to="/"><img alt="" src="assets/Asset_24.png" /> My Cases</Link></li>
                         </div>
                     </ul>

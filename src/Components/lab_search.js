@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import { Container, Row, Col, Card, Form, Button, Dropdown } from "react-bootstrap";
-import DropdownButton from 'react-bootstrap/DropdownButton'
+import DropdownButton from 'react-bootstrap/DropdownButton';
 import RangeSlider from 'react-bootstrap-range-slider';
-import Table from 'react-bootstrap/Table'
+import Table from 'react-bootstrap/Table';
+import '../App.css';
 
 function LabSearch() {
   const [value, setValue] = useState(0);
   return (
-    <div className="lab_search pt-4">
+    <div className="lab_search grid_mlc_common pt-4">
       <header className="header_top">
         <div className="row">
           <div className="col-lg-6 col-sm-6 col-6">

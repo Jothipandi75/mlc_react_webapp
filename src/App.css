@@ -1196,3 +1196,150 @@ border-radius: 5px;
   margin-top: 4rem;
 }
 /* s-style */
+
+/* 19th feb style */
+
+.App .lab_search.grid_mlc_common .card .card-body {
+  padding: 3rem 5rem;
+}
+
+.App .lab_search.grid_mlc_common .card .card-body .grid_bx_order {
+  border: 1px solid rgba(0,0,0,.125);
+  border-radius: 0.7rem;
+  padding: 0.55rem;
+  width: 70%;
+  text-align: center;
+}
+
+.App .lab_search.grid_mlc_common .card .card-body .grid_bx_order span{
+
+}
+
+.App .lab_search.grid_mlc_common .card .card-body label.form-label, .App .lab_search.grid_mlc_common .card .card-body label, .App .lab_search.grid_mlc_common .card .card-body .grid_bx_order span.grey, .App .lab_search.grid_mlc_common .card .card-body .light_blue .card-body p span.grey{
+  color: #a3a0a0;
+}
+
+.App .lab_search.grid_mlc_common .card .card-body label.form-check-label{
+  color: #212529;
+}
+
+.App .lab_search.grid_mlc_common .card .card-body .btn-primary.w-70 {
+  padding: 0.55rem;
+  width: 70%;
+  text-align: left;
+}
+
+.App .lab_search.grid_mlc_common .card .card-body .btn-primary.w-70 i.fa.fa-angle-right {
+  float: right;
+  margin-top: 2px;
+  font-size: 20px;
+}
+
+.App .lab_search.grid_mlc_common .card .card-body .btn-default.default{
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 0.7rem;
+    padding: 0.55rem;
+    width: 100%;
+}
+
+.App .lab_search.grid_mlc_common .card .card-body .btn-default.default i.fa.fa-plus-circle{
+   color: #a3a0a0;
+    font-size: 1.3rem;
+    margin-right: 10px;
+    margin-top: 0px;
+    position: relative;
+    top: 1px;
+}
+
+.App .lab_search.grid_mlc_common .card .card-body .light_blue{
+  background: #F0F5FF;
+  border-radius: 20px;
+  padding: 4rem;
+  margin-top: 20px;
+}
+
+.App .lab_search.grid_mlc_common .card .card-body .light_blue .card-body {
+  padding: 2rem 2rem;
+}
+
+.App .lab_search.grid_mlc_common .card .card-body .light_blue .card-body .title_h4 h4 {
+  position: relative;
+  padding-bottom: 12px;
+}
+
+.App .lab_search.grid_mlc_common .card .card-body .light_blue .card-body .title_h4 h4 span.float_right {
+  position: absolute;
+  right: 0;
+}
+
+.App .lab_search.grid_mlc_common .card .card-body .light_blue .card-body .title_h4 h4 span.float_right i{
+    cursor: pointer;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 100%;
+    padding: 0.55rem;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    text-align: center;
+    margin: 0px 10px;
+}
+
+.App .lab_search.grid_mlc_common .card .card-body .light_blue .card-body .title_h4 h4 span.float_right i.fa.fa-pencil{
+  color:#5dbbfe;
+}
+
+.App .lab_search.grid_mlc_common .card .card-body .light_blue .card-body .title_h4 h4 span.float_right i.fa.fa-trash{
+  color:#f82d12;
+}
+
+.App .lab_search.grid_mlc_common .card .card-body form small.text_12{
+ font-size: 13px;
+ color: #212529;
+}
+
+.App .lab_search.grid_mlc_common .card .card-body .light_blue .card-body .form-check-inline {
+  margin-right: 2rem;
+}
+
+.App .lab_search.grid_mlc_common .card .card-body textarea.form-control{
+   height: auto;
+}
+
+.App .lab_search.grid_mlc_common .card .card-body textarea.form-control.textarea_minheight {
+  height: 148px;
+}
+
+/* 19th feb style */
+
+/* 21th feb style */
+
+.additionalservice .modal-footer, .add_restoration .modal-footer{
+  justify-content: center;
+  background-color: #f0f5ff;
+}
+
+.additionalservice .modal-footer button, .add_restoration .modal-footer button {
+  width: 40%;
+  padding: 10px;
+  border-radius: 0.7rem;
+}
+
+.additionalservice .modal-footer button.btn.btn-light, .add_restoration .modal-footer button.btn.btn-light{
+  background-color: #fff;
+  border: 1px solid rgba(0,0,0,.125);
+}
+
+.additionalservice.modal .modal-body .form-control, .add_restoration.modal .modal-body .form-control{
+  height: calc(1.5em + .75rem + 10px);
+}
+
+@media (min-width: 576px){
+
+  .add_restoration.modal .modal-dialog {
+    max-width: 80%;
+    margin: 1.75rem auto;
+}
+
+}
+
+/* 21th feb style */
