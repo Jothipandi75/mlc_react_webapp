@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Container, Row, Col, Card, Form, Button, Dropdown, Modal, } from "react-bootstrap";
 import DropdownButton from 'react-bootstrap/DropdownButton';
 import FormCheck from 'react-bootstrap/FormCheck';
+import { Link } from "react-router-dom";
 
 import '../App.css';
 
@@ -16,6 +17,11 @@ function AddNewCase() {
     const [show_additionalservice, setShow__additionalservice] = useState(false);
     const additionalserviceClose = () => setShow__additionalservice(false);
     const additionalserviceShow = () => setShow__additionalservice(true);
+
+    const [show_marketplace, setShow_marketplace] = useState(false);
+    const marketplaceClose = () => setShow_marketplace(false);
+    const marketplaceShow = () => setShow_marketplace(true);
+
 
     /* Modal popup */
     const [fname, setName] = useState("");
@@ -135,8 +141,8 @@ function AddNewCase() {
                                     </Form.Select>
                                 </Col>
                                 <Col lg={6} sm={6} xs={12}>
-                                    <button className="btn btn-primary w-70 mb-3">Market Place  <i className="fa fa-angle-right" aria-hidden="true"></i>
-                                    </button>
+                                    <Button className="btn btn-primary w-70 mb-3" onClick={marketplaceShow}>Market Place  <i className="fa fa-angle-right" aria-hidden="true"></i>
+                                    </Button>
                                 </Col>
                                 <Col lg={12} sm={12} xs={12} className="mt-1">
                                     <h3>Restoration Details *</h3>
@@ -575,7 +581,10 @@ function AddNewCase() {
                                 </Form>
                             </Col>
                             <Col lg={6} sm={6} xs={12}>
-                            
+                                <Form>
+                                    <Form.Group>
+                                    </Form.Group>
+                                </Form>
                             </Col>
                         </Row>
                     </Modal.Body>
@@ -610,6 +619,157 @@ function AddNewCase() {
                             Save Changes
                         </Button>
                     </Modal.Footer>
+                </Modal>
+                <Modal show={show_marketplace} className="marketplace drawer right-align" scrollable={true} onHide={marketplaceClose}>
+                    <Modal.Header closeButton>
+                        <Modal.Title className="text-capitalize">Market Place</Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>
+                        <div className="parent_grid">
+                            <span className="blue">Best Matching</span>
+                            <Form>
+                                {['radio'].map((type) => (
+                                    <div key={`inline-${type}`} className="mb-3">
+                                        <Form.Check
+                                            inline
+                                            label="90% Matching "
+                                            name="group1"
+                                            type={type}
+                                            id={`inline-${type}-1`}
+                                        />
+                                    </div>
+                                ))}
+                            </Form>
+                            <Row>
+                                <Col lg={3} sm={3} xs={12}>
+                                    <div className="card_bx">
+                                        <img alt="img" src="assets/user_icon.webp" />
+                                    </div>
+                                </Col>
+                                <Col lg={9} sm={9} xs={12}>
+                                    <div className="right_content">
+                                        <h3>American Dental Lab</h3>
+                                        <div className="grid_star">
+                                            <span className="font_20px">4.0</span>
+                                            <span className="star"><i class="fa fa-star" aria-hidden="true"></i></span>
+                                            <span className="star"><i class="fa fa-star" aria-hidden="true"></i></span>
+                                            <span className="star"><i class="fa fa-star" aria-hidden="true"></i></span>
+                                            <span className="star"><i class="fa fa-star" aria-hidden="true"></i></span>
+                                            <span className="star"><i class="fa fa-star-o" aria-hidden="true"></i></span>
+                                        </div>
+                                    </div>
+                                </Col>
+                                <Col lg={9} sm={9} xs={12} className="mb-4">
+                                    <Link to="/add_lab_preference"> <Button className="btn btn-primary w-100 light_blue mr-lg-3 mr-sm-3 mr-0">View Profile</Button> </Link>
+                                </Col>
+                            </Row>
+                            <Row>
+                                <Col lg={6} lg={6} xs={12}>
+                                    <p className="gery">Type of Dentistry</p>
+                                </Col>
+                                <Col lg={6} lg={6} xs={12}>
+                                    <p className="light_blue">Matched</p>
+                                </Col>
+                            </Row>
+                            <Row>
+                                <Col lg={6} lg={6} xs={12}>
+                                    <p className="gery">Case Type</p>
+                                </Col>
+                                <Col lg={6} lg={6} xs={12}>
+                                    <p className="light_blue">Matched</p>
+                                </Col>
+                            </Row>
+                            <Row>
+                                <Col lg={6} lg={6} xs={12}>
+                                    <p className="gery">Scanner Name</p>
+                                </Col>
+                                <Col lg={6} lg={6} xs={12}>
+                                    <p className="black">Not Matched</p>
+                                </Col>
+                            </Row>
+                            <Row>
+                                <Col lg={6} lg={6} xs={12}>
+                                    <p className="gery">Product Details</p>
+                                </Col>
+                                <Col lg={6} lg={6} xs={12}>
+                                    <p className="light_blue">Matched</p>
+                                </Col>
+                            </Row>
+
+                        </div>
+                        <div className="parent_grid">
+                            <span className="blue">Best Matching</span>
+                            <Form>
+                                {['radio'].map((type) => (
+                                    <div key={`inline-${type}`} className="mb-3">
+                                        <Form.Check
+                                            inline
+                                            label="90% Matching "
+                                            name="group1"
+                                            type={type}
+                                            id={`inline-${type}-1`}
+                                        />
+                                    </div>
+                                ))}
+                            </Form>
+                            <Row>
+                                <Col lg={3} sm={3} xs={12}>
+                                    <div className="card_bx">
+                                        <img alt="img" src="assets/user_icon.webp" />
+                                    </div>
+                                </Col>
+                                <Col lg={9} sm={9} xs={12}>
+                                    <div className="right_content">
+                                        <h3>American Dental Lab</h3>
+                                        <div className="grid_star">
+                                            <span className="font_20px">4.0</span>
+                                            <span className="star"><i class="fa fa-star" aria-hidden="true"></i></span>
+                                            <span className="star"><i class="fa fa-star" aria-hidden="true"></i></span>
+                                            <span className="star"><i class="fa fa-star" aria-hidden="true"></i></span>
+                                            <span className="star"><i class="fa fa-star" aria-hidden="true"></i></span>
+                                            <span className="star"><i class="fa fa-star-o" aria-hidden="true"></i></span>
+                                        </div>
+                                    </div>
+                                </Col>
+                                <Col lg={9} sm={9} xs={12} className="mb-4">
+                                    <Link to="/add_lab_preference"> <Button className="btn btn-primary w-100 light_blue mr-lg-3 mr-sm-3 mr-0">View Profile</Button> </Link>
+                                </Col>
+                            </Row>
+                            <Row>
+                                <Col lg={6} lg={6} xs={12}>
+                                    <p className="gery">Type of Dentistry</p>
+                                </Col>
+                                <Col lg={6} lg={6} xs={12}>
+                                    <p className="light_blue">Matched</p>
+                                </Col>
+                            </Row>
+                            <Row>
+                                <Col lg={6} lg={6} xs={12}>
+                                    <p className="gery">Case Type</p>
+                                </Col>
+                                <Col lg={6} lg={6} xs={12}>
+                                    <p className="light_blue">Matched</p>
+                                </Col>
+                            </Row>
+                            <Row>
+                                <Col lg={6} lg={6} xs={12}>
+                                    <p className="gery">Scanner Name</p>
+                                </Col>
+                                <Col lg={6} lg={6} xs={12}>
+                                    <p className="black">Not Matched</p>
+                                </Col>
+                            </Row>
+                            <Row>
+                                <Col lg={6} lg={6} xs={12}>
+                                    <p className="gery">Product Details</p>
+                                </Col>
+                                <Col lg={6} lg={6} xs={12}>
+                                    <p className="light_blue">Matched</p>
+                                </Col>
+                            </Row>
+
+                        </div>
+                    </Modal.Body>
                 </Modal>
             </div>
         </div>

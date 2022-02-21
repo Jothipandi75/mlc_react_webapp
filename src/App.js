@@ -16,6 +16,7 @@ import MlcLandingPage from "./Components/mlc_landing_page";
 import Login from "./Components/login";
 import LabSearch from "./Components/lab_search";
 import AddNewCase from "./Components/add_new_case";
+import EventsDetails from "./Components/events_details";
 
 function App() {
   return (
@@ -63,6 +64,7 @@ function App() {
                 <Route path="/login" element={<Login />} />
                 <Route path="/lab_search" element={<LabSearch />} />
                 <Route path="/add_new_case" element={< AddNewCase />} />
+                <Route path="/events_details" element={< EventsDetails />} />
               </Routes>
             </Col>
           </Row>

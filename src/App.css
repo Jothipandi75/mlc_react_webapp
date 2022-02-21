@@ -1203,6 +1203,10 @@ border-radius: 5px;
   padding: 3rem 5rem;
 }
 
+.App .lab_search.grid_mlc_common .mb-4.card .card-body{
+  padding: 1rem 1rem;
+}
+
 .App .lab_search.grid_mlc_common .card .card-body .grid_bx_order {
   border: 1px solid rgba(0,0,0,.125);
   border-radius: 0.7rem;
@@ -1333,13 +1337,195 @@ border-radius: 5px;
   height: calc(1.5em + .75rem + 10px);
 }
 
+
+.modal.drawer {
+  display: flex !important;
+  pointer-events: none;
+}
+.modal.drawer * {
+  pointer-events: none;
+}
+.modal.drawer .modal-dialog {
+  margin: 0px;
+  display: flex;
+  flex: auto;
+  transform: translate(25%, 0);
+}
+.modal.drawer .modal-dialog .modal-content {
+  border: none;
+  border-radius: 0px;
+}
+.modal.drawer .modal-dialog .modal-content .modal-body {
+  overflow: auto;
+}
+.modal.drawer.show {
+  pointer-events: auto;
+}
+.modal.drawer.show * {
+  pointer-events: auto;
+}
+.modal.drawer.show .modal-dialog {
+  transform: translate(0, 0);
+}
+.modal.drawer.right-align {
+  flex-direction: row-reverse;
+  padding-right: 0px !important;
+}
+.modal.drawer.left-align:not(.show) .modal-dialog {
+  transform: translate(-25%, 0);
+}
+
+.modal.marketplace .modal-dialog .modal-content .modal-header {
+  background-color: #ffffff;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  color: #212529;
+  padding: 0.5rem;
+}
+
+.modal.drawer.right-align .parent_grid {
+  position: relative;
+  text-align: left;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.modal.marketplace .parent_grid span.blue {
+    position: absolute;
+    right: 0;
+    background-color: #007bff;
+    color: #fff;
+    padding: 5px 15px 7px 15px;
+    border-bottom-left-radius: 8px;
+    top: 0;
+    border-top-right-radius: 8px;
+}
+
+.modal.drawer.right-align .parent_grid .card_bx img{
+    width: 100%;
+    padding: 15px;
+}
+
+@media (min-width: 576px){
+.modal.drawer.right-align .modal-dialog-scrollable {
+    max-height: calc(100% - 0.1rem);
+}
+}
+
+
+.modal.drawer.right-align .parent_grid .right_content h3 {
+    font-family: Circular Std;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 40px;
+    color: #0F2851;
+    border-left: 0px;
+    padding-left: 0px;
+}
+
+.modal.drawer.right-align .parent_grid .right_content .grid_star {
+  margin-bottom: 20px;
+}
+
+.modal.drawer.right-align .parent_grid .right_content .grid_star span.star i.fa-star {
+  color: #FFE500;
+  border-radius: 1px;
+}
+
+.modal.drawer.right-align .parent_grid .right_content .grid_star span.star {
+  cursor: pointer;
+  padding: 0px 5px;
+  display: inline-block;
+}
+
+.modal.drawer.right-align .parent_grid .right_content span.font_20px {
+    font-family: Circular Std;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: normal;
+    color: #8997AD;
+}
+
+.modal.drawer.right-align .parent_grid .right_content .grid_star span.star i.fa-star-o {
+  box-sizing: border-box;
+  border-radius: 1px;
+  color: #8997AD;
+}
+
+.modal.drawer.right-align .parent_grid .btn.btn-primary{
+    color: #fff;
+    background-color: #5dbbfe;
+    border-color: #5dbbfe;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.modal.drawer.right-align .parent_grid .gery{
+  color: #8997AD;
+}
+
+.modal.drawer.right-align .parent_grid .black{
+  color: #212529;
+}
+
+.modal.drawer.right-align .parent_grid .light_blue {
+  color: #5dbbfe;
+}
+.modal.drawer.right-align .form-check.form-check-inline input.form-check-input{
+
+}
+
 @media (min-width: 576px){
 
-  .add_restoration.modal .modal-dialog {
+.modal.drawer.right-align .modal-dialog-scrollable .modal-content {
+  max-height: calc(100% - 0rem);
+}
+
+}
+
+@media (min-width: 576px){
+
+.add_restoration.modal .modal-dialog {
     max-width: 80%;
     margin: 1.75rem auto;
 }
 
+}
+
+.App .news_events .carosel_events {
+
+}
+
+.App .news_events .carosel_events .carousel-control-next, .App .news_events .carosel_events .carousel-control-prev{
+  width: 2%;
+}
+
+.App .news_events .carosel_events .carousel-item img{
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+}
+
+.App .news_events .carosel_events .carousel-caption{
+  position: relative;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: #212529;
+  text-align: center;
+  background-color: #fff;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+
+.App .news_events .carosel_events .carousel-indicators{
+  display: none;
 }
 
 /* 21th feb style */

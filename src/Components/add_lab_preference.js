@@ -1,7 +1,7 @@
 // Add Lab Preference
 import React, { useState } from "react";
 import {Container, Row, Col, Card, Form, Button } from "react-bootstrap";
-
+import { Link } from "react-router-dom";
 function AddLab() {
   // function handleClick(e) {
   //   e.preventDefault();
@@ -84,7 +84,7 @@ const Element =() => <div className="add_append">
       <Col lg={12} sm={12} xs={12}>
       <div className="row top_header_bx pt-3">
         <div className="col-lg-4 col-sm-4 col-12 text-left">
-        <h1><i class="fa fa-angle-left" aria-hidden="true"></i> Add Lab Profile</h1>
+        <h1><Link to="/"><i class="fa fa-angle-left" aria-hidden="true"></i></Link> Add Lab Profile</h1>
         </div>
         <div className="col-lg-8 col-sm-8 col-12 text-right">
         <ul className="menu_list_top">

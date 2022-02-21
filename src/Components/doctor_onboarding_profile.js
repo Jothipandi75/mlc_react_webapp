@@ -398,7 +398,7 @@ function DoctorOnboardingProfile() {
             <img alt="success" src="assets/login_success.png" className="success_img" />
             <h2>Thank you for registering </h2>
             <small>We will contact you soon</small>
-            <Link to="/mlc_marketplace"><button className="btn btn-primary">Back to home</button></Link>
+            <Link to="/"><button className="btn btn-primary">Back to home</button></Link>
           </div>
         </Modal.Body>
         {/* <Modal.Footer>

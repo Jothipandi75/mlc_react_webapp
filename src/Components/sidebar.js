@@ -14,6 +14,7 @@ function Sidebar() {
       <li><Link to="/mlc_landing_page">MLC Landing page</Link></li>
       <li><Link to="/login">Login</Link></li>
       <li><Link to="/lab_search">Lab Search</Link></li>
+      <li><Link to="/events_details">Events details</Link></li>
       </ul>
     </div>
   )

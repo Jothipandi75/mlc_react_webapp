@@ -115,7 +115,7 @@ function LabSearch() {
                       />
                       <Form.Check
                         default
-                        label=">s15 days"
+                        label=">15 days"
                         name="eta_case1"
                         type={type}
                         id={`eta-${type}-3`}
@@ -153,7 +153,7 @@ function LabSearch() {
               <Col lg={9} sm={8} xs={12}>
                 <h4 className="h4_title">Search result</h4>
                 <Card className="mb-4">
-                  <div className="card-body">
+                  <div className="card-body p-3">
                     <Row className="product_list">
                       <Col lg={3} sm={4} xs={12}>
                         <img alt="" src="assets/flag.png" className="img-fluid product_img" />
