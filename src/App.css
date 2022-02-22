@@ -1062,6 +1062,7 @@ border-radius: 5px;
   max-width: 20px;
   min-height: 20px;
   max-height: 20px;
+  cursor: pointer;
 }
 
 .App .card .card-body .filter_view .form-check-label {
@@ -1146,9 +1147,13 @@ border-radius: 5px;
 }
 
 .App .card .card-body .filter_view .product_list .table td, .App .card .card-body .filter_view .product_list .table th {
-  padding: 0.75rem;
+  padding: 0.5rem;
   vertical-align: top;
   border-top: 0px solid #dee2e6;
+}
+
+.App .card .card-body .filter_view .product_list.doctor_list p span.grey {
+  width: 200px;
 }
 
 .App .btn-primary {
@@ -1221,10 +1226,12 @@ border-radius: 5px;
 
 .App .lab_search.grid_mlc_common .card .card-body label.form-label, .App .lab_search.grid_mlc_common .card .card-body label, .App .lab_search.grid_mlc_common .card .card-body .grid_bx_order span.grey, .App .lab_search.grid_mlc_common .card .card-body .light_blue .card-body p span.grey{
   color: #a3a0a0;
+  cursor: pointer;
 }
 
 .App .lab_search.grid_mlc_common .card .card-body label.form-check-label{
   color: #212529;
+  cursor: pointer;
 }
 
 .App .lab_search.grid_mlc_common .card .card-body .btn-primary.w-70 {

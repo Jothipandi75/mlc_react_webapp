@@ -98,8 +98,10 @@ function MlcLandingPage() {
                                 <Col lg={6} sm={6} xs={12}>
                                     <div className="grid_card">
                                         <span className="top_corner"></span>
+                                        <Link to="/doctor_search">
                                         <img alt="icon" src="assets/Asset_icon_1.svg" />
                                         <h5>Search Doctor</h5>
+                                        </Link>
                                     </div>
                                 </Col>
                                 <Col lg={6} sm={6} xs={12}>
@@ -133,6 +135,7 @@ function MlcLandingPage() {
                                 <div className="grid_bx_parent">
                                     <h4>News / Events</h4>
                                     <div className="bg_grey">
+                                    <Link to="/events_details">
                                         <div className="row">
                                             <div className="col-lg-4 col-sm-4 col-4">
                                                 <div className="grid_bx1">
@@ -145,8 +148,10 @@ function MlcLandingPage() {
                                                 </div>
                                             </div>
                                         </div>
+                                        </Link>
                                     </div>
                                     <div className="bg_grey">
+                                    <Link to="/events_details">
                                         <div className="row">
                                             <div className="col-lg-4 col-sm-4 col-4">
                                                 <div className="grid_bx1">
@@ -159,8 +164,10 @@ function MlcLandingPage() {
                                                 </div>
                                             </div>
                                         </div>
+                                        </Link>
                                     </div>
                                     <div className="bg_grey">
+                                    <Link to="/events_details">
                                         <div className="row">
                                             <div className="col-lg-4 col-sm-4 col-4">
                                                 <div className="grid_bx1">
@@ -173,6 +180,7 @@ function MlcLandingPage() {
                                                 </div>
                                             </div>
                                         </div>
+                                        </Link>
                                     </div>
                                 </div>
                             </div>

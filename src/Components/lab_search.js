@@ -29,7 +29,7 @@ function LabSearch() {
       </header>
       <Col lg={12} sm={12} xs={12}>
         <div className="card mb-lg-5 mb-sm-5 mb-3">
-          <div className="card-body">
+          <div className="card-body p-4">
             <h3>Lab Search </h3>
             <Row className="grid_search">
               <Col lg={3} sm={4} xs={12}>
