@@ -116,15 +116,19 @@ function MlcLandingPage() {
                                 <Col lg={6} sm={6} xs={12}>
                                     <div className="grid_card">
                                         <span className="top_corner"></span>
+                                        <Link to="/news_events">
                                         <img alt="icon" src="assets/Asset_icon_3.svg" />
                                         <h5>Events</h5>
+                                        </Link>
                                     </div>
                                 </Col>
                                 <Col lg={6} sm={6} xs={12}>
                                     <div className="grid_card">
                                         <span className="top_corner"></span>
+                                        <Link to="/news_events">
                                         <img alt="icon" src="assets/Asset_icon_4.svg" />
                                         <h5>News</h5>
+                                        </Link>
                                     </div>
                                 </Col>
                             </Row>

@@ -18,6 +18,7 @@ import LabSearch from "./Components/lab_search";
 import AddNewCase from "./Components/add_new_case";
 import EventsDetails from "./Components/events_details";
 import DoctorSearch from "./Components/doctor_search";
+import NewsEvents from "./Components/news_events";
 
 function App() {
   return (
@@ -67,6 +68,7 @@ function App() {
                 <Route path="/add_new_case" element={< AddNewCase />} />
                 <Route path="/events_details" element={< EventsDetails />} />
                 <Route path="/doctor_search" element={< DoctorSearch />} />
+                <Route path="/news_events" element={< NewsEvents />} />
               </Routes>
             </Col>
           </Row>
